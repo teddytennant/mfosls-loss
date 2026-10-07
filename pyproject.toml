@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mfosls_loss"
+version = "0.1.0"
+description = "MFOSLS loss for parametric monotone nonlinearities (arXiv:2610.05767)."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "jax",
+  "numpy",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mfosls_loss*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
